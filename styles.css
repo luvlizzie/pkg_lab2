@@ -1,0 +1,74 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url("leopard_print.png") repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.container {
+  background: #f5f5dc;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  max-width: 1100px;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+input {
+  margin: 10px 0;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.file-count, .progress {
+  margin: 10px 0;
+  color: #666;
+  font-style: italic;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background: #e0d4b7;
+  font-weight: bold;
+}
+
+tr:nth-child(even) { 
+  background: #fafafa; 
+}
+
+.loading { 
+  opacity: 0.6; 
+}
+
+.error { 
+  color: #d32f2f; 
+  font-style: italic; 
+}
