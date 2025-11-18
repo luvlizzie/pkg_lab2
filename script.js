@@ -85,7 +85,7 @@ async function processBatch(total, done) {
         img.onload = () => row.cells[1].textContent = `${img.width} × ${img.height}`;
         img.src = URL.createObjectURL(file);
 
-        if (view.getUint32(12, false) === 0x49484452) { // IHDR
+        if (view.getUint32(12, false) === 0x49484452) { 
           const bitDepth = view.getUint8(24);
           const colorType = view.getUint8(25);
           let channels = {0:1,2:3,3:1,4:2,6:4}[colorType] || 3;
@@ -97,7 +97,7 @@ async function processBatch(total, done) {
         while (i < view.byteLength) {
           const length = view.getUint32(i, false);
           const type = view.getUint32(i + 4, false);
-          if (type === 0x70485973) { // pHYs
+          if (type === 0x70485973) { 
             const xppu = view.getUint32(i + 8, false);
             const unit = view.getUint8(i + 16);
             if (unit === 1) dpi = `${Math.round(xppu * 0.0254)} dpi`;
